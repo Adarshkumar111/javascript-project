@@ -1,0 +1,69 @@
+<!-- create a toggle button that chage the screen to dark mode when clicked And light mode whhen click again -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+
+        .light{
+            background-color: white;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="mode">
+        change mode
+    </button>
+
+    <p>dark to light and light to dark</p>
+
+    <!-- color change using only js -->
+    <!-- <script>
+            let modBtn=document.querySelector("#mode");
+            let currMode="light";//dark
+
+            modBtn.addEventListener("click", ()=>{
+                if(currMode=="light"){
+                    currMode="dark";
+                    document.querySelector("body").style.backgroundColor="black";
+                } else{
+                    currMode="light";document.querySelector("body").style.backgroundColor="white";
+                }
+                console.log(currMode);
+            })
+    </script> -->
+
+
+    <script>
+
+        //color chhange using css and js
+
+            let modBtn=document.querySelector("#mode");
+            let body = document.querySelector("body");
+            let currMode="light";//dark
+
+            modBtn.addEventListener("click", ()=>{
+                if(currMode=="light"){
+                    currMode="dark";
+                    body.classList.add("dark");
+                    body.classList.remove("light");
+                } else{
+                    currMode="light";
+                    body.classList.add("light");
+                    body.classList.remove("dark");
+                }
+                console.log(currMode);
+            })
+    </script>
+</body>
+</html>
+

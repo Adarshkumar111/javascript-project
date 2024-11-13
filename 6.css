@@ -1,0 +1,12 @@
+#heading {
+    color: blue;
+    text-decoration: dashed;
+    background-color: yellow;
+}
+body{
+    background-color: gray;
+}
+.button{
+    background-color: green;
+    color: white;
+}
